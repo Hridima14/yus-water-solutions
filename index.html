@@ -75,7 +75,7 @@
       "@type": "Product",
       "position": 2,
       "name": "YUS Alkaline Water Machine",
-      "description": "Electrolysis-based water ionizer offering four selectable alkaline ranges from 8 to 10.5, each paired with a corresponding acidic stream."
+      "description": "Electrolysis-based water ionizer offering selectable pH levels."
     }
   ]
 }
@@ -109,7 +109,7 @@
         +91 90224 08406
       </a>
       <a href="#contact" class="btn btn-primary nav-cta">Get Free Consultation</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu aria-expanded="false" aria-controls="drawer"">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B2038" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
@@ -153,8 +153,8 @@
     </div>
     <div class="hero-visual">
       <div class="hero-ripple">
-        <div class="product-shot light focus-top">
-          <img src="assets/product/alkaline-machine.jpg" alt="YUS Alkaline Water Machine with selectable pH control panel" width="1099" height="1431" loading="eager">
+     <div class="product-shot light focus-top">
+     <img src="assets/product/alkaline-machine.jpg" alt="..." width="1099" height="1431" loading="eager">
           <span class="shot-caption">Alkaline Water Machine</span>
         </div>
       </div>
@@ -231,7 +231,7 @@
     </div>
     <div class="solutions-grid">
       <div class="solution-card reveal">
-        <div class="card-media"><img src="assets/product/water-softener.jpg" alt="YUS Water Softener electromagnetic device" loading="lazy" width="1400" height="931"></div>
+        <div class="card-media"><img src="assets/product/water-softener.jpg" ... width="1400" height="931"></div>
         <span class="tag">Product 01</span>
         <h3>YUS Water Softener</h3>
         <p class="desc">An electromagnetic scale-reduction system that helps manage the effects of hard water — with no salt, no chemicals, no filters, and no regular maintenance.</p>
@@ -243,12 +243,12 @@
         <a href="#softener" class="btn btn-ghost">Learn More</a>
       </div>
       <div class="solution-card reveal reveal-delay-1">
-        <div class="card-media"><img src="assets/product/alkaline-machine.jpg" alt="YUS Alkaline Water Machine" loading="lazy" width="1099" height="1431" style="object-position:center 18%;"></div>
+        <div class="card-media"><img src="assets/product/alkaline-machine.jpg" ... width="1099" height="1431" style="object-position:center 18%;"></div>
         <span class="tag">Product 02</span>
         <h3>YUS Alkaline Water Machine</h3>
         <p class="desc">An electrolysis-based water ionizer that produces water at multiple selectable pH levels, giving you control over your everyday water.</p>
         <ul class="feat-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Four selectable alkaline ranges — 8 to 10.5</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Four selectable pH levels — 8.0 to 10.5</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Simultaneous alkaline & acidic stream output</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Full user control at the touch of a button</li>
         </ul>
@@ -266,7 +266,7 @@
     <div class="deep-grid">
       <div class="deep-visual reveal" style="padding:0;">
         <div class="product-shot light" style="width:100%;height:100%;">
-          <img src="assets/product/water-softener.jpg" alt="YUS Water Softener installed unit" loading="lazy" width="1400" height="931">
+          <img src="assets/product/water-softener.png" alt="YUS Water Softener installed unit" loading="lazy" width="601" height="495">
           <span class="shot-caption">No Salt · No Chemicals</span>
         </div>
       </div>
@@ -403,31 +403,33 @@
         <h2>Water, Tuned to Your Needs</h2>
         <p style="margin-top:10px;font-size:1.02rem;">The YUS Alkaline Water Machine uses electrolysis to separate purified water into two streams — an alkaline stream at your selected pH, and an acidic stream suited to different, non-drinking applications.</p>
 
-        <div class="ph-selector" role="group" aria-label="Select alkaline pH range">
-          <button class="ph-btn active" data-ph="8-8.5" aria-pressed="true">8 – 8.5</button>
-          <button class="ph-btn" data-ph="8.5-9" aria-pressed="false">8.5 – 9</button>
-          <button class="ph-btn" data-ph="9-9.5" aria-pressed="false">9 – 9.5</button>
-          <button class="ph-btn" data-ph="9.5-10.5" aria-pressed="false">9.5 – 10.5</button>
+        <div class="ph-selector" role="group" aria-label="Select pH level">
+          <button class="ph-btn active" data-ph="8.0">pH 8.0</button>
+          <button class="ph-btn" data-ph="8.5">pH 8.5</button>
+          <button class="ph-btn" data-ph="9.0">pH 9.0</button>
+          <button class="ph-btn" data-ph="9.5">pH 9.5</button>
+          <button class="ph-btn" data-ph="10.5">pH 10.5</button>
         </div>
 
         <div class="ph-panel">
+          <span class="ph-panel-tag">Alkaline Output — Drinking</span>
           <h4 id="phTitle">pH 8 – 8.5 — Everyday Drinking Water</h4>
           <p id="phDesc">A gentle starting point, close to lightly alkaline mineral water — suited to everyday hydration for the whole family.</p>
+
+          <span class="ph-panel-tag acid">Acidic Output — Non-Drinking</span>
+          <h4 id="phAcidTitle">pH 6 – 6.5 — Plants &amp; Household Rinsing</h4>
+          <p id="phAcidDesc">Mildly acidic — a gentle choice for watering plants or general household rinsing.</p>
+
           <p class="disc">Water suitability depends on source water quality. Please follow manufacturer guidance for your household's needs.</p>
         </div>
       </div>
 
       <div class="machine-visual reveal">
-        <img class="machine-photo" src="assets/product/alkaline-machine.jpg" alt="YUS Alkaline Water Machine dispensing alkaline water" loading="lazy" width="1099" height="1431">
-        <div class="machine-scrim"></div>
         <div class="machine-ambient"></div>
         <div class="ph-readout" id="phReadout">
-          <span class="ph-readout-label">Alkaline Output</span>
-          <span class="ph-readout-value" id="phReadoutValue">pH 8 – 8.5</span>
-        </div>
-        <div class="ph-readout-acid" id="phReadoutAcid">
-          <span class="ph-readout-label">Acidic Output</span>
-          <span class="ph-readout-value" id="phReadoutAcidValue">pH 6 – 6.5</span>
+          <span class="ph-readout-label">Now Dispensing</span>
+          <span class="ph-readout-value" id="phReadoutValue">pH 8.0</span>
+          <span class="ph-readout-sub" id="phReadoutSub">Alkaline Stream</span>
         </div>
       </div>
     </div>
@@ -438,12 +440,13 @@
     </div>
     <div class="ph-table-wrap">
       <table class="ph-table">
-        <thead><tr><th>Alkaline Range</th><th>Acidic Range Produced</th><th>General Intended Use</th><th>Short Description</th></tr></thead>
+        <thead><tr><th>Selected pH</th><th>General Intended Use</th><th>Short Description</th></tr></thead>
         <tbody>
-          <tr><td>8 – 8.5</td><td>6 – 6.5</td><td>Everyday Drinking</td><td>Light, approachable everyday hydration water.</td></tr>
-          <tr><td>8.5 – 9</td><td>5.5 – 6</td><td>Regular Household Use</td><td>A step up for those preferring a slightly higher level.</td></tr>
-          <tr><td>9 – 9.5</td><td>5 – 5.5</td><td>Cooking, Beverages &amp; Active Use</td><td>Popular for tea, coffee, everyday cooking and active households.</td></tr>
-          <tr><td>9.5 – 10.5</td><td>4.5 – 5</td><td>General Cleaning (Non-Drinking)</td><td>Suited to washing produce and general household cleaning tasks.</td></tr>
+          <tr><td>8.0</td><td>Everyday Drinking</td><td>Light, approachable everyday hydration water.</td></tr>
+          <tr><td>8.5</td><td>Regular Household Use</td><td>A step up for those preferring a slightly higher level.</td></tr>
+          <tr><td>9.0</td><td>Cooking & Beverages</td><td>Popular for use in tea, coffee and everyday cooking.</td></tr>
+          <tr><td>9.5</td><td>Active Lifestyle Use</td><td>Preferred by many active households.</td></tr>
+          <tr><td>10.5</td><td>General Cleaning (Non-Drinking)</td><td>Suited to washing produce and general household cleaning tasks.</td></tr>
         </tbody>
       </table>
     </div>
@@ -599,7 +602,7 @@
       <div class="faq-item"><button class="faq-q">Is salt required for the softener to work?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>No. The YUS Water Softener is a salt-free, chemical-free electromagnetic system.</p></div></div>
       <div class="faq-item"><button class="faq-q">How long does installation take?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Installation is typically quick and non-intrusive, fitted directly onto your existing pipework. Our team will confirm exact timing during your consultation.</p></div></div>
       <div class="faq-item"><button class="faq-q">Who should use the alkaline water machine?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>It's suited to households, offices and health-conscious consumers who want control over their everyday drinking water's pH level.</p></div></div>
-      <div class="faq-item"><button class="faq-q">How many pH ranges are available?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Four selectable alkaline ranges: 8–8.5, 8.5–9, 9–9.5 and 9.5–10.5. Each simultaneously produces a paired acidic range (6–6.5, 5.5–6, 5–5.5 and 4.5–5 respectively).</p></div></div>
+      <div class="faq-item"><button class="faq-q">How many pH levels are available?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Five selectable levels: 8.0, 8.5, 9.0, 9.5 and 10.5.</p></div></div>
       <div class="faq-item"><button class="faq-q">What happens to the acidic water produced?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Electrolysis naturally separates water into two streams. The acidic stream is intended for suitable non-drinking applications depending on the selected level.</p></div></div>
       <div class="faq-item"><button class="faq-q">Is the technology laboratory tested?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Yes, testing has been carried out with reference to Krishi Vigyan Kendra (ICAR) and government laboratory analysis.</p></div></div>
       <div class="faq-item"><button class="faq-q">Can this be used for borewell water?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Yes, the water softener is commonly used for borewell water. Our team can advise on the right setup for your source water.</p></div></div>
@@ -623,7 +626,7 @@
     {"@type":"Question","name":"How does electromagnetic water softening work?","acceptedAnswer":{"@type":"Answer","text":"An electromagnetic field is applied around the incoming pipe, influencing mineral particles so they are less likely to adhere to pipe and appliance surfaces."}},
     {"@type":"Question","name":"Does the water softener require maintenance?","acceptedAnswer":{"@type":"Answer","text":"The system is designed for minimal maintenance after a one-time installation, with no filters or cartridges to replace."}},
     {"@type":"Question","name":"Is salt required for the softener to work?","acceptedAnswer":{"@type":"Answer","text":"No. The YUS Water Softener is a salt-free, chemical-free electromagnetic system."}},
-    {"@type":"Question","name":"How many pH ranges are available on the alkaline machine?","acceptedAnswer":{"@type":"Answer","text":"Four selectable alkaline ranges: 8-8.5, 8.5-9, 9-9.5 and 9.5-10.5, each paired with a corresponding acidic range."}}
+    {"@type":"Question","name":"How many pH levels are available on the alkaline machine?","acceptedAnswer":{"@type":"Answer","text":"Five selectable levels: 8.0, 8.5, 9.0, 9.5 and 10.5."}}
   ]
 }
 </script>

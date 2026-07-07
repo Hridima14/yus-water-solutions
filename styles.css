@@ -339,8 +339,11 @@ table.lab-table tr:last-child td{border-bottom:none;}
 }
 .ph-panel h4{font-size:1.05rem;}
 .ph-panel p{margin-top:8px;font-size:0.9rem;}
+.ph-panel-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:0.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--royal);margin-bottom:8px;}
+.ph-panel-tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sky);}
+.ph-panel-tag.acid{color:var(--ink-soft);margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);}
+.ph-panel-tag.acid::before{background:#C9A227;}
 .ph-panel .disc{margin-top:14px;font-size:0.78rem;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:12px;}
-
 .machine-visual{position:relative;height:440px;border-radius:28px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-soft);background:linear-gradient(160deg,#0B2E4E,#14568E);}
 .machine-visual .machine-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;transition:transform .7s var(--ease);}
 .machine-visual:hover .machine-photo{transform:scale(1.03);}
