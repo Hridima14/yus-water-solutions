@@ -7,11 +7,12 @@ window.addEventListener('scroll', () => {
 /* ============ MOBILE DRAWER ============ */
 const drawer = document.getElementById('drawer');
 const scrim = document.getElementById('scrim');
-document.getElementById('navToggle').addEventListener('click', () => { drawer.classList.add('open'); scrim.classList.add('show'); });
+const navToggleBtn = document.getElementById('navToggle');
+navToggleBtn.addEventListener('click', () => { drawer.classList.add('open'); scrim.classList.add('show'); navToggleBtn.setAttribute('aria-expanded','true'); });
 document.getElementById('drawerClose').addEventListener('click', closeDrawer);
 scrim.addEventListener('click', closeDrawer);
 drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
-function closeDrawer(){ drawer.classList.remove('open'); scrim.classList.remove('show'); }
+function closeDrawer(){ drawer.classList.remove('open'); scrim.classList.remove('show'); navToggleBtn.setAttribute('aria-expanded','false'); }
 
 /* ============ SCROLL REVEAL ============ */
 const revealEls = document.querySelectorAll('.reveal');

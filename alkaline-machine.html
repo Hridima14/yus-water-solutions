@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YUS Alkaline Water Machine | Water Ionizer with Selectable pH 8.0–10.5</title>
-<meta name="description" content="Advanced electrolysis-based alkaline water ionizer with five selectable pH levels. User-controlled, premium drinking water experience for homes and offices.">
+<title>YUS Alkaline Water Machine | Water Ionizer with Alkaline Ranges 8–10.5</title>
+<meta name="description" content="Advanced electrolysis-based alkaline water ionizer with four selectable alkaline ranges from 8 to 10.5, each paired with a corresponding acidic stream. User-controlled, premium drinking water experience.">
 <link rel="canonical" href="https://www.yuswater.com/alkaline-machine.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="YUS Alkaline Water Machine | Water Ionizer with Selectable pH 8.0–10.5">
-<meta property="og:description" content="Advanced electrolysis-based alkaline water ionizer with five selectable pH levels. User-controlled, premium drinking water experience for homes and offices.">
+<meta property="og:title" content="YUS Alkaline Water Machine | Water Ionizer with Alkaline Ranges 8–10.5">
+<meta property="og:description" content="Advanced electrolysis-based alkaline water ionizer with four selectable alkaline ranges, each paired with a corresponding acidic stream.">
 <meta property="og:url" content="https://www.yuswater.com/alkaline-machine.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.ico">
@@ -41,7 +41,7 @@
         +91 90224 08406
       </a>
       <a href="contact.html" class="btn btn-primary nav-cta">Get Free Consultation</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B2038" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
@@ -69,7 +69,7 @@
     <div class="breadcrumb"><a href="index.html">Home</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg><span>Alkaline Water Machine</span></div>
     <span class="eyebrow">Flagship Product 02</span>
     <h1>YUS Alkaline Water Machine — Water, Tuned to Your Needs</h1>
-    <p class="lead">An electrolysis-based water ionizer that produces water at multiple selectable pH levels, giving you full control over your everyday water.</p>
+    <p class="lead">An electrolysis-based water ionizer that produces water across four selectable alkaline ranges, giving you full control over your everyday water.</p>
     <div class="hero-ctas">
       <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
       <a href="#ph-select" class="btn btn-ghost">Try the pH Selector</a>
@@ -79,8 +79,8 @@
 
 <section class="section" style="padding-top:0;padding-bottom:0;">
   <div class="container">
-    <div class="product-shot light contain reveal" style="aspect-ratio:16/8;">
-      <img src="assets/product/alkaline-machine.png" alt="YUS Alkaline Water Machine, full product photo" loading="eager" width="690" height="915">
+    <div class="product-shot light contain reveal" style="aspect-ratio:1099/1431;max-width:460px;margin:0 auto;">
+      <img src="assets/product/alkaline-machine.jpg" alt="YUS Alkaline Water Machine, full product photo" loading="eager" width="1099" height="1431">
       <span class="shot-caption">YUS Alkaline Water Machine</span>
     </div>
   </div>
@@ -94,27 +94,31 @@
         <h2>Electrolysis, Explained Simply</h2>
         <p style="margin-top:10px;font-size:1.02rem;">The machine uses electrolysis to separate purified water into two streams — an alkaline stream at your selected pH, and an acidic stream suited to different, non-drinking applications.</p>
 
-        <div class="ph-selector" role="group" aria-label="Select pH level">
-          <button class="ph-btn active" data-ph="8.0">pH 8.0</button>
-          <button class="ph-btn" data-ph="8.5">pH 8.5</button>
-          <button class="ph-btn" data-ph="9.0">pH 9.0</button>
-          <button class="ph-btn" data-ph="9.5">pH 9.5</button>
-          <button class="ph-btn" data-ph="10.5">pH 10.5</button>
+        <div class="ph-selector" role="group" aria-label="Select alkaline pH range">
+          <button class="ph-btn active" data-ph="8-8.5" aria-pressed="true">8 – 8.5</button>
+          <button class="ph-btn" data-ph="8.5-9" aria-pressed="false">8.5 – 9</button>
+          <button class="ph-btn" data-ph="9-9.5" aria-pressed="false">9 – 9.5</button>
+          <button class="ph-btn" data-ph="9.5-10.5" aria-pressed="false">9.5 – 10.5</button>
         </div>
 
         <div class="ph-panel">
-          <h4 id="phTitle">pH 8.0 — Everyday Drinking Water</h4>
+          <h4 id="phTitle">pH 8 – 8.5 — Everyday Drinking Water</h4>
           <p id="phDesc">A gentle starting point, close to lightly alkaline mineral water — suited to everyday hydration for the whole family.</p>
           <p class="disc">Water suitability depends on source water quality. Please follow manufacturer guidance for your household's needs.</p>
         </div>
       </div>
 
       <div class="machine-visual reveal">
+        <img class="machine-photo" src="assets/product/alkaline-machine.jpg" alt="YUS Alkaline Water Machine dispensing alkaline water" loading="lazy" width="1099" height="1431">
+        <div class="machine-scrim"></div>
         <div class="machine-ambient"></div>
         <div class="ph-readout" id="phReadout">
-          <span class="ph-readout-label">Now Dispensing</span>
-          <span class="ph-readout-value" id="phReadoutValue">pH 8.0</span>
-          <span class="ph-readout-sub" id="phReadoutSub">Alkaline Stream</span>
+          <span class="ph-readout-label">Alkaline Output</span>
+          <span class="ph-readout-value" id="phReadoutValue">pH 8 – 8.5</span>
+        </div>
+        <div class="ph-readout-acid" id="phReadoutAcid">
+          <span class="ph-readout-label">Acidic Output</span>
+          <span class="ph-readout-value" id="phReadoutAcidValue">pH 6 – 6.5</span>
         </div>
       </div>
     </div>
@@ -129,13 +133,12 @@
     </div>
     <div class="ph-table-wrap">
       <table class="ph-table">
-        <thead><tr><th>Selected pH</th><th>General Intended Use</th><th>Short Description</th></tr></thead>
+        <thead><tr><th>Alkaline Range</th><th>Acidic Range Produced</th><th>General Intended Use</th><th>Short Description</th></tr></thead>
         <tbody>
-          <tr><td>8.0</td><td>Everyday Drinking</td><td>Light, approachable everyday hydration water.</td></tr>
-          <tr><td>8.5</td><td>Regular Household Use</td><td>A step up for those preferring a slightly higher level.</td></tr>
-          <tr><td>9.0</td><td>Cooking &amp; Beverages</td><td>Popular for use in tea, coffee and everyday cooking.</td></tr>
-          <tr><td>9.5</td><td>Active Lifestyle Use</td><td>Preferred by many active households.</td></tr>
-          <tr><td>10.5</td><td>General Cleaning (Non-Drinking)</td><td>Suited to washing produce and general household cleaning tasks.</td></tr>
+          <tr><td>8 – 8.5</td><td>6 – 6.5</td><td>Everyday Drinking</td><td>Light, approachable everyday hydration water.</td></tr>
+          <tr><td>8.5 – 9</td><td>5.5 – 6</td><td>Regular Household Use</td><td>A step up for those preferring a slightly higher level.</td></tr>
+          <tr><td>9 – 9.5</td><td>5 – 5.5</td><td>Cooking, Beverages &amp; Active Use</td><td>Popular for tea, coffee, everyday cooking and active households.</td></tr>
+          <tr><td>9.5 – 10.5</td><td>4.5 – 5</td><td>General Cleaning (Non-Drinking)</td><td>Suited to washing produce and general household cleaning tasks.</td></tr>
         </tbody>
       </table>
     </div>
