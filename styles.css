@@ -343,10 +343,8 @@ table.lab-table tr:last-child td{border-bottom:none;}
 .ph-panel-tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sky);}
 .ph-panel-tag.acid{color:var(--ink-soft);margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);}
 .ph-panel-tag.acid::before{background:#C9A227;}
-.ph-panel .ph-use{margin-top:10px;font-size:0.85rem;color:var(--navy);}
-.ph-panel .ph-use-label{display:block;font-family:var(--font-mono);font-size:0.65rem;letter-spacing:.06em;text-transform:uppercase;color:var(--royal);margin-bottom:3px;}
-.ph-panel-tag.acid + h4{margin-top:0;}
 .ph-panel .disc{margin-top:14px;font-size:0.78rem;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:12px;}
+
 .machine-visual{position:relative;height:440px;border-radius:28px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-soft);background:linear-gradient(160deg,#0B2E4E,#14568E);}
 .machine-visual .machine-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;transition:transform .7s var(--ease);}
 .machine-visual:hover .machine-photo{transform:scale(1.03);}
@@ -365,7 +363,7 @@ table.lab-table tr:last-child td{border-bottom:none;}
 
 /* pH table */
 .ph-table-wrap{overflow-x:auto;border-radius:18px;border:1px solid var(--line);background:#fff;}
-table.ph-table{width:100%;border-collapse:collapse;min-width:960px;}
+table.ph-table{width:100%;border-collapse:collapse;min-width:640px;}
 table.ph-table th,table.ph-table td{padding:16px 20px;text-align:left;font-size:0.88rem;border-bottom:1px solid var(--line);}
 table.ph-table th{font-family:var(--font-mono);font-size:0.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--royal);background:var(--aqua-soft);}
 table.ph-table tr:last-child td{border-bottom:none;}
