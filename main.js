@@ -43,3 +43,47 @@ const cio = new IntersectionObserver((entries) => {
   });
 }, {threshold:0.4});
 counters.forEach(c => cio.observe(c));
+
+/* ============ NEWSLETTER SUBSCRIBE ============ */
+const newsletterBtn = document.getElementById('newsletterBtn');
+if (newsletterBtn) {
+  const newsletterEmail = document.getElementById('newsletterEmail');
+  const newsletterMsg = document.getElementById('newsletterMsg');
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  newsletterBtn.addEventListener('click', () => {
+    const email = newsletterEmail.value.trim();
+
+    if (!email) {
+      newsletterMsg.textContent = 'Please enter your email address.';
+      newsletterMsg.className = 'newsletter-msg error';
+      return;
+    }
+    if (!emailPattern.test(email)) {
+      newsletterMsg.textContent = 'Please enter a valid email address.';
+      newsletterMsg.className = 'newsletter-msg error';
+      return;
+    }
+
+    newsletterBtn.disabled = true;
+    newsletterBtn.textContent = 'Subscribing...';
+    newsletterMsg.textContent = '';
+    newsletterMsg.className = 'newsletter-msg';
+
+    setTimeout(() => {
+      newsletterMsg.textContent = "You're subscribed! Thank you for joining.";
+      newsletterMsg.className = 'newsletter-msg success';
+      newsletterEmail.value = '';
+      newsletterBtn.textContent = 'Subscribed';
+
+      setTimeout(() => {
+        newsletterBtn.disabled = false;
+        newsletterBtn.textContent = 'Subscribe';
+      }, 3000);
+    }, 600);
+  });
+
+  newsletterEmail.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') newsletterBtn.click();
+  });
+}

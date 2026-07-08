@@ -473,6 +473,11 @@ table.ph-table tr:last-child td{border-bottom:none;}
 .form-success svg{width:44px;height:44px;color:var(--royal);margin:0 auto 12px;}
 @media (max-width:900px){.contact-grid{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}}
 
+.whatsapp-points{margin-top:var(--sp-2);display:flex;flex-direction:column;gap:10px;}
+.whatsapp-points li{display:flex;gap:10px;align-items:center;font-size:0.88rem;color:var(--ink-soft);}
+.whatsapp-points svg{width:16px;height:16px;color:var(--royal);flex-shrink:0;}
+.form-card .btn-primary svg{margin-right:2px;}
+
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -486,7 +491,11 @@ footer{background:#081E33;color:rgba(255,255,255,.7);padding:var(--sp-5) 0 var(-
 .footer-grid a:hover{color:#fff;}
 .newsletter{display:flex;gap:8px;margin-top:10px;}
 .newsletter input{flex:1;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);color:#fff;font-size:0.85rem;}
-.newsletter button{padding:10px 16px;border-radius:8px;background:var(--sky);color:#fff;font-weight:600;font-size:0.85rem;}
+.newsletter button{padding:10px 16px;border-radius:8px;background:var(--sky);color:#fff;font-weight:600;font-size:0.85rem;transition:opacity .2s;}
+.newsletter button[disabled]{opacity:.7;cursor:default;}
+.newsletter-msg{margin-top:8px;font-size:0.78rem;min-height:16px;}
+.newsletter-msg.success{color:var(--aqua);}
+.newsletter-msg.error{color:#f0a3a3;}
 .footer-bottom{margin-top:var(--sp-4);padding-top:var(--sp-2);border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.8rem;}
 .footer-tagline{font-family:var(--font-mono);color:var(--aqua);font-size:0.8rem;}
 @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;}}
