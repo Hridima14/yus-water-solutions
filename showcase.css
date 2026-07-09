@@ -1,0 +1,75 @@
+/* =========================================================
+   SHOWCASE — Installations & Reviews (Card Swap)
+   Uses the site's existing CSS variables (colors, spacing,
+   shadows, easing) so it matches the current theme exactly.
+========================================================= */
+.showcase-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-5);
+  align-items:start;
+}
+.showcase-col{display:flex;flex-direction:column;align-items:center;text-align:center;}
+.showcase-col h3{font-size:clamp(1.3rem,2.2vw,1.7rem);}
+.showcase-col p.showcase-sub{margin-top:8px;font-size:0.92rem;max-width:360px;}
+
+.cardswap-wrap{
+  position:relative;width:100%;max-width:420px;margin-top:var(--sp-4);
+  height:400px;display:flex;align-items:center;justify-content:center;
+}
+.cardswap-stage{
+  position:relative;width:100%;max-width:380px;height:320px;
+  perspective:1200px;
+}
+.cardswap-stage > .cs-card{
+  position:absolute;top:50%;left:50%;
+  border-radius:20px;overflow:hidden;
+  box-shadow:var(--shadow-card);
+  background:#fff;border:1px solid var(--line);
+  will-change:transform;backface-visibility:hidden;
+  transform-style:preserve-3d;cursor:pointer;
+  transition:box-shadow .35s var(--ease);
+}
+.cardswap-stage > .cs-card:hover{box-shadow:0 30px 70px -18px rgba(11,46,78,.4);}
+
+/* Installation cards */
+.cs-card.installation-card{display:flex;flex-direction:column;}
+.cs-card .cs-photo{position:relative;flex:1;overflow:hidden;}
+.cs-card .cs-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease);}
+.cs-card.installation-card:hover .cs-photo img{transform:scale(1.06);}
+.cs-card .cs-photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(11,46,78,.82) 0%, rgba(11,46,78,.15) 55%, transparent 80%);
+}
+.cs-card .cs-info{position:absolute;left:0;right:0;bottom:0;padding:18px 20px;color:#fff;z-index:2;}
+.cs-card .cs-city{
+  display:block;font-family:var(--font-mono);font-size:0.7rem;text-transform:uppercase;
+  letter-spacing:.08em;color:var(--aqua);
+}
+.cs-card .cs-desc{margin-top:5px;font-size:0.86rem;color:rgba(255,255,255,.88);}
+
+/* Review cards */
+.cs-card.review-card{
+  padding:28px 26px;display:flex;flex-direction:column;justify-content:center;
+  background:linear-gradient(160deg,#fff,var(--aqua-soft));
+}
+.review-card .cs-avatar{
+  width:46px;height:46px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--sky),var(--aqua));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:700;font-family:var(--font-display);font-size:0.9rem;
+  margin-bottom:14px;
+}
+.review-card .cs-avatar-img{width:46px;height:46px;border-radius:50%;object-fit:cover;margin-bottom:14px;}
+.review-card .cs-stars{color:#F2B84B;font-size:0.95rem;letter-spacing:2px;margin-bottom:12px;}
+.review-card .cs-quote{font-size:0.92rem;font-style:italic;color:var(--ink);line-height:1.55;flex:1;}
+.review-card .cs-name{margin-top:16px;font-weight:700;color:var(--navy);font-size:0.92rem;}
+.review-card .cs-meta{font-size:0.78rem;color:var(--ink-soft);margin-top:2px;}
+
+@media (max-width:900px){
+  .showcase-grid{grid-template-columns:1fr;gap:var(--sp-6);}
+  .cardswap-wrap{height:360px;}
+  .cardswap-stage{height:290px;}
+}
+@media (max-width:480px){
+  .cardswap-wrap{height:320px;}
+  .cardswap-stage{height:260px;max-width:300px;}
+}
