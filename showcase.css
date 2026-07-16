@@ -65,11 +65,14 @@
 .review-card .cs-meta{font-size:0.78rem;color:var(--ink-soft);margin-top:2px;}
 
 @media (max-width:900px){
-  .showcase-grid{grid-template-columns:1fr;gap:var(--sp-6);}
+  .showcase-grid{grid-template-columns:1fr;gap:var(--sp-5);}
   .cardswap-wrap{height:360px;}
   .cardswap-stage{height:290px;}
 }
 @media (max-width:480px){
-  .cardswap-wrap{height:320px;}
-  .cardswap-stage{height:260px;max-width:300px;}
+  .cardswap-wrap{height:300px;margin-top:var(--sp-3);}
+  .cardswap-stage{height:250px;max-width:280px;}
+  .showcase-col p.showcase-sub{font-size:0.85rem;}
+  .cs-card.review-card{padding:20px 18px;}
+  .cs-card .cs-info{padding:14px 16px;}
 }

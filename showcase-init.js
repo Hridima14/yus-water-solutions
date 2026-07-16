@@ -55,7 +55,8 @@
       starsHtml += i < rating ? '★' : '☆';
     }
 
-    var metaParts = [escapeHtml(item.city)];
+    var metaParts = [];
+    if (item.city) metaParts.push(escapeHtml(item.city));
     if (item.product) metaParts.push(escapeHtml(item.product));
 
     card.innerHTML =
@@ -102,16 +103,21 @@
     var sharedWidth = Math.min(installSize.width, reviewSize.width);
     var sharedHeight = Math.round(sharedWidth * (BASE_HEIGHT / BASE_WIDTH));
 
+    // On narrow phones, use a tighter stack (less spread, fewer visible
+    // cards) so the depth effect never pushes cards past the viewport edge.
+    var isNarrow = sharedWidth < 340;
+    var spreadFactor = isNarrow ? 0.06 : 0.1;
+
     var sharedConfig = {
       width: sharedWidth,
       height: sharedHeight,
-      cardDistance: Math.round(sharedWidth * 0.1),
-      verticalDistance: Math.round(sharedWidth * 0.1),
+      cardDistance: Math.round(sharedWidth * spreadFactor),
+      verticalDistance: Math.round(sharedWidth * spreadFactor),
       delay: 4000,
       pauseOnHover: true,
-      skewAmount: 4,
+      skewAmount: isNarrow ? 2 : 4,
       easing: 'elastic',
-      maxVisible: 4
+      maxVisible: isNarrow ? 3 : 4
     };
 
     var installSwap = new window.CardSwap(installStage, sharedConfig);

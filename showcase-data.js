@@ -82,34 +82,34 @@ const installationsData = [
 const reviewsData = [
   {
     photo: null,
-    name: "Rangoli pearl hotel owner",
+    name: "Owner, Hotel Rangoli Pearl",
     city: "Amravati",
     rating: 5,
-    review: "Extremely good results,No scale deposition.",
+    review: "Extremely good results, no scale deposition.",
     product: "Water Softener"
   },
   {
     photo: null,
-    name: "Jai Ambe Garden city citizens",
+    name: "Residents, Jay Ambe Garden City",
     city: "Amravati",
     rating: 5,
-    review: "Cleaner utensils, more soap lather,recommended for everyone, No chemicals.",
-    product: "Alkaline Water Machine"
+    review: "Cleaner utensils, more soap lather. Recommended for everyone — no chemicals.",
+    product: "Water Softener"
   },
   {
     photo: null,
-    name: "Sambodhi Agro Food and Beverage owner",
-    city: "Amravati",
+    name: "Owner, Sambodhi Agro Food & Beverages",
+    city: "",
     rating: 5,
     review: "Reasonable rate, worth buying.",
-    product: "Water Softener"
+    product: ""
   },
   {
     photo: null,
-    name: "Adv. Prashant Bhelande sir",
-    city: "Amravati",
+    name: "Adv. Prashant Bhelande",
+    city: "",
     rating: 5,
-    review: "I used it in my farm, it's excellent for healthy crop and yeild.",
-    product: "Both"
+    review: "I used it on my farm — it's excellent for healthy crops and yield.",
+    product: "Water Softener"
   }
 ];
